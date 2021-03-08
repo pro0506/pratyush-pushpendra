@@ -1,52 +1,83 @@
 import java.util.*;
 
+ 
+
 class Student
-  { //class variables
-    string name;
+  {
+    //class variables
+    String name;
     int id;
     double percentage;
-    list<string>  skills;
-//single variable setters
-     Student(String name)
-      {this.name=name;}
-     Student(int id)
-      {this.id=id;}
+    ArrayList<String> Skills = new ArrayList<String>();
+  
+     // single variable setters
+    Student(String name)
+    {
+         this.name=name;
+    }
+    Student(int id)
+    {
+        this.id=id;
+    }
     Student(double percentage)
-      {this.percentage=percentage;}
-    Student(list<string> skills)
-      {this.skills=skills;}
+    {
+        this.percentage=percentage;
+    }
+    Student(ArrayList<String> skills)
+    {
+        this.Skills = skills;
+    }
 
-//all variable setters
-    Student(String name, int id, double percentage, list<string> skills)
-      { this.name=name;
-      this.id=id;
-      this.percentage=percentage;
-      this.id=skills;}
+ 
 
-//getters
-    public int getname() 
-      {return name;}
-    public int getid() 
-      {return id;}
-    public int getpercentage() 
-      {return percentage;}
-    public list<string> getskills() 
-      {return skills;}
+    //all variable setters
+    Student(String name, int id, double percentage, ArrayList<String> skills)
+    {
+       this.name = name;
+       this.id = id;
+       this.percentage = percentage;
+       this.Skills = skills;
+    }
 
+ 
 
+    //getters
+    public int getName() 
+    {
+        return name;
+    }
+    public int getId() 
+    {
+        return id;
+    }
+    public int getPercentage() 
+    {
+        return percentage;
+    }
+    public ArrayList<String> getSkills() 
+    { 
+        return Skills;
+    }
+
+ 
+
+ 
 
 }
-//operations class
-    class operations extends student {
-    public void changeName(String name){
+  //operations class with all required methods
+  class operations extends student {
+    
+      public void changeName(String name){
         this.name = name;
     }
-    public void changeName(){
+    
+      public void changeName(){
         System.out.prinltn("Enter the new name");
         String name = sc.next();
         this.name = name;
     }
-    public void addSkill(){
+    
+      public void addSkill(){
         int sk = 6;
         while(sk>5){
             System.out.println("Enter the no of skills you want to add. It shoould be max 5");
@@ -56,9 +87,16 @@ class Student
             System.out.println("Enter the skill");
             String skill = sc.next();
             this.skills.add(skill);
-      }}}
-class displayOperations extends operations{
-    public void showAttributes(){
+        }
+      }
+    }
+  
+
+ 
+
+  //displayOperations class with all functions
+  class displayOperations extends operations{
+   public void showAttributes(){
         System.out.prinltn(this.id);
         System.out.prinltn(this.name);
         System.out.prinltn(this.percentage);
@@ -70,8 +108,9 @@ class displayOperations extends operations{
     public void showDifference(displayOperations d){
         System.out.prinltn(this.percentage-d.percentage);
     }
-    }
 }
+
+ 
 
 public class Driver{
     public static void main(String args[]) {
