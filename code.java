@@ -1,6 +1,6 @@
 import java.util.*;
 
- 
+//student class creation
 
 class Student
   {
@@ -70,13 +70,13 @@ class Student
       public void changeName(String name){
         this.name = name;
     }
-    
+    //method to update name
       public void changeName(){
         System.out.prinltn("Enter the new name");
         String name = sc.next();
         this.name = name;
     }
-    
+    //method to add skills
       public void addSkill(){
         int sk = 6;
         while(sk>5){
@@ -102,16 +102,18 @@ class Student
         System.out.prinltn(this.percentage);
         System.out.prinltn(this.skills);
     }
+   //display name in upper case
     public void showName(){
         System.out.prinltn(this.name.toUpperCase());
     }
+   //display percentage difference
     public void showDifference(displayOperations d){
         System.out.prinltn(this.percentage-d.percentage);
     }
 }
 
  
-
+//Driver code
 public class Driver{
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
