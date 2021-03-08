@@ -117,16 +117,19 @@ class Student
 public class Driver{
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
+      //creating 5 objects
         Student S1 = new displayOperations("ABC", 1, 45.34, new ArrayList<String>());
         Student S2 = new displayOperations("DEF", 2, 90.34, new ArrayList<String>{{add("php"); add("mySQL")}});
         Student S3 = new displayOperations("GHI", 3, 63.34, new ArrayList<String>{{add("php"); add("mySQL")}});
         Student S4 = new displayOperations("JKL", 4, 12.34, new ArrayList<String>{{add("php"); add("mySQL")}});
         Student S5 = new displayOperations("MNO", 5, 80.34, new ArrayList<String>{{add("php"); add("mySQL")}});
+      //calling methods
         S2.changeName("XYZ");
         S3.changeName();
         S1.addSkill();
         S2.showAttributes();
         S4.showName();
         S5.showDifference(S3);
+      
     }
 }
