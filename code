@@ -1,0 +1,79 @@
+class Student
+{
+  string name;
+int id;
+double percentage;
+list<string>  skills;
+//single vars
+Student(String name)
+{this.name=name;}
+Student(int id)
+{this.id=id;}
+Student(double percentage)
+{this.percentage=percentage;}
+Student(list<string> skills)
+{this.skills=skills;}
+//double vars
+Student(String name, int id)
+{this.name=name;
+this.id=id;}
+
+Student(String name, double percentage )
+{this.name=name;
+this.percentage=percentage;}
+
+Student(String name, list<string> skills)
+{this.name=name;
+this.skills=skills;}
+
+Student(String name, int id)
+{this.name=name;
+this.id=id;}
+Student(douuble percentage, int id)
+{this.percentage=percentage;
+this.id=id;}
+Student(list<string> skills, int id)
+{this.skills=skills;
+this.id=id;}
+Student(list<string> skills, double percentage)
+{this.skills=skills;
+this.percentage=percentage;}
+//triple vars
+Student(String name, int id, double percentage)
+{this.name=name;
+this.id=id;
+this.percentage=percentage;}
+Student(String name, int id, list<string> skills)
+{this.name=name;
+this.id=id;
+this.skills=skills;}
+Student(String name, double percentage, list<string> skills)
+{this.name=name;
+this.percentage=percentage;
+this.skills=skills;
+}
+Student( int id, double percentage, list<string> skills)
+{this.id=id;
+this.percentage=percentage;
+this.skills=skills;}
+//quad var
+Student(String name, int id, double percentage, list<string> skills)
+{this.name=name;
+this.id=id;
+this.percentage=percentage;
+this.id=skills;}
+
+//getter
+public int getname() 
+{return name;}
+public int getid() 
+{return id;}
+public int getpercentage() 
+{return percentage;}
+public list<string> getskills() 
+{return skills;}
+
+
+
+}
+
