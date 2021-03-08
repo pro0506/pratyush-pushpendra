@@ -1,12 +1,12 @@
 import java.util.*;
 
 class Student
-  {
+  { //class variables
     string name;
     int id;
     double percentage;
     list<string>  skills;
-//single vars
+//single variable setters
      Student(String name)
       {this.name=name;}
      Student(int id)
@@ -16,13 +16,14 @@ class Student
     Student(list<string> skills)
       {this.skills=skills;}
 
+//all variable setters
     Student(String name, int id, double percentage, list<string> skills)
       { this.name=name;
       this.id=id;
       this.percentage=percentage;
       this.id=skills;}
 
-//getter
+//getters
     public int getname() 
       {return name;}
     public int getid() 
@@ -35,7 +36,7 @@ class Student
 
 
 }
-
+//operations class
     class operations extends student {
     public void changeName(String name){
         this.name = name;
